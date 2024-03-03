@@ -1,0 +1,5 @@
+#! /usr/bin/bash
+
+echo "creating database..."
+
+psql $CONNECTION_URL
