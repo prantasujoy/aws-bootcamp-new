@@ -1,9 +1,10 @@
 #! /usr/bin/bash
 
-
-#replace cruddr db name with ''
-
-echo "dropping db"
+#echo "== db-drop"
+CYAN='\033[1;36m'
+NO_COLOR='\033[0m'
+LABEL="db-drop"
+printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
 
 NO_DB_CONNECTION_URL=$(sed 's/\/cruddr//g' <<<"$CONNECTION_URL")
-psql $NO_DB_CONNECTION_URL -c "DROP DATABASE IF EXISTS cruddr;"
+psql $NO_DB_CONNECTION_URL -c "DROP DATABSE IF EXISTS cruddr;"
