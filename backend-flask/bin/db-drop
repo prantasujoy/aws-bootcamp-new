@@ -7,4 +7,4 @@ LABEL="db-drop"
 printf "${CYAN}== ${LABEL}${NO_COLOR}\n"
 
 NO_DB_CONNECTION_URL=$(sed 's/\/cruddr//g' <<<"$CONNECTION_URL")
-psql $NO_DB_CONNECTION_URL -c "DROP DATABSE IF EXISTS cruddr;"
+psql $NO_DB_CONNECTION_URL -c "DROP DATABASE IF EXISTS cruddr;"
